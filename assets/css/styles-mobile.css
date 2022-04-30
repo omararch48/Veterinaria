@@ -1,0 +1,268 @@
+/*                                 */
+/*            * Mobile *           */
+/*                                 */
+
+
+/*************************************************************************/
+/******************************  Variables  ******************************/
+/*************************************************************************/
+
+:root {
+    /* Font size */
+    --04-rem:  0.4rem;
+    --08-rem:  0.8rem;
+    --12-rem:  1.2rem;
+    --16-rem:  1.6rem;
+    --20-rem:  2.0rem;
+    --24-rem:  2.4rem;
+    --28-rem:  2.8rem;
+    --32-rem:  3.2rem;
+    --36-rem:  3.6rem;
+    --40-rem:  4.0rem;
+    --60-rem:  6.0rem;
+    --80-rem:  8.0rem;
+    --100-rem: 10.0rem;
+    --120-rem: 12.0rem;
+    /* Colors */
+    --main-white:               #FFFFFF;
+    --main-black:               #000000;
+    --main-yellow:              #F2FA5A;
+    --main-blue:                #4D77FF;
+    --complementary-blue-one:   #56BBF1;
+    --complementary-blue-two:   #5EE6EB;
+    --complementary-yellow-one: #a7ad28;
+}
+
+
+/************************************************************/
+/************************* Settings *************************/
+/************************************************************/
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin:     0;
+    padding:    0;
+}
+
+html {
+    box-sizing: border-box;
+    font-size:  62.5%;
+}
+
+body {    
+    background-color: var(--complementary-two);
+    font-family:      'Ubuntu', sans-serif;
+    font-size:        var(--20-rem);
+    line-height:      2;   
+}
+
+
+/*************************************************************/
+/************************* Utilities *************************/
+/*************************************************************/
+
+.clear-link {
+    text-decoration: none;
+}
+
+.rem-16 {
+    font-size: var(--16-rem);
+}
+
+.rem-28 {
+    font-size: var(--16-rem);
+}
+
+.rem-120 {
+    font-size: var(--120-rem);
+}
+
+.margin-top-100 {
+    margin-top: 100vh;
+}
+
+/********************************************************/
+/************************* Hero *************************/
+/********************************************************/
+
+.hero-image {
+    background-image: url('../img/jpg/hero.jpg');
+}
+
+.hero-container {
+    background-position: center/center;
+    background-repeat:   no-repeat;
+    background-size:     cover;    
+    height:              85vh;
+    margin:              0;
+    left:                0;
+    padding:             0;
+    position:            absolute;
+    top:                 15vh;
+    width:               100%;
+}
+
+.hero-filter {
+    align-items:      center;
+    background-color: rgba(94, 230, 235, 0.3);
+    display:          flex;
+    height:           85vh;
+    justify-content:  center;
+    position:         absolute;
+    left:             0;
+    top:              15vh;
+    width:            100%;
+}
+
+
+/********************************************************/
+/************************* Logo *************************/
+/********************************************************/
+
+.logo-small {
+    background-color: var(--main-blue);
+    border-radius:    50%;
+    font-size:        var(--16-rem);
+    margin:           0 0 0 10%;
+    padding:          4rem 2rem 2rem 2rem;
+}
+
+.logo-main {
+    font-size:  var(--60-rem);
+    margin:     10% 0 0 5%;
+    transition: all linear 0.4s;
+}
+
+.logo-small,
+.logo-main {
+    color:    var(--main-yellow);
+    display:  flex;
+    position: relative;
+}
+
+.logo-title {
+    left:     0;
+    position: absolute;
+    top:      0;
+    z-index:  100;
+}
+
+.logo-title-first {
+    font-weight: 700;
+    transform:   translate(-10%, 0%);
+}
+
+.logo-title-second {
+    color:       var(--main-blue);
+    font-weight: 700;
+    z-index:     100;
+}
+
+.logo-image i {
+    transform: rotate(24deg) translate(-160%, -20%) scale(4.8);
+    z-index:   10;
+}
+
+.logo-main:hover {
+    cursor:    pointer;
+    transform: scale(1.2);
+}
+
+
+/**********************************************************/
+/************************* NavBar *************************/
+/**********************************************************/
+
+.header-main {
+    align-items:      center;
+    background-color: var(--main-yellow);
+    display:          flex;
+    height:           15vh;
+    justify-content:  space-between;
+    left:             0;
+    position:         fixed;
+    margin:           0;
+    top:              0;
+    width:            100%;
+    z-index:          1000;
+}
+
+.nav-main {
+    font-weight: 500;
+    width:       55%;
+}
+
+.nav-main ul {
+    display:         flex;
+    flex-direction:  row;
+    font-weight:     500;
+    gap:             1rem;
+    justify-content: space-around;
+}
+
+.nav-main li {  
+    list-style: none;
+}
+
+.nav-main a {
+    border-bottom: 0.8rem solid transparent;
+    color:         var(--main-blue);
+    display:       block;
+    padding:       calc(15vh/2 - 2.8rem);
+}
+
+.nav-main a:hover {
+    border-bottom: 0.8rem solid var(--main-blue);
+}
+
+.nav-active {
+    border-bottom: 0.8rem solid var(--main-blue);
+    font-weight:   700;
+}
+
+
+/**********************************************************/
+/************************* Footer *************************/
+/**********************************************************/
+
+
+.footer-main {
+    align-items:      center;
+    background-color: var(--main-blue);
+    display:          flex;
+    flex-direction:   column;
+    justify-content:  center;
+    height:           40rem;
+}
+
+.social-list {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    background-color: pink;
+    z-index: 100;
+}
+
+.social-list li {
+    /* position: absolute; */
+    list-style: none;
+}
+
+
+
+.social-paw {
+    position: absolute;
+    font-size: 20rem;
+    transform: rotate(-25deg);
+    z-index: 50;
+}
+
+.copyright {
+    position: absolute;
+    z-index: 100;
+}
+
+.social-i {
+    font-size: 10rem;
+}
